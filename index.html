@@ -1,0 +1,1245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahindra Blossom</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS ANIMATION LIBRARY -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+      .sold-out {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: #b91c1c;
+        color: white;
+        font-size: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      .amenity-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        opacity: 0;
+        transition: 0.3s;
+      }
+
+      .amenity-card:hover .amenity-overlay {
+        opacity: 1;
+      }
+
+      .gallery-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .tall {
+        height: 420px;
+      }
+
+      /* FIX FOOTER VIDEO OVERLAP SPACE */
+      .footer-spacer {
+        height: 220px;
+        background: transparent;
+      }
+
+      @media (min-width: 768px) {
+        .footer-spacer {
+          height: 300px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="font-sans text-gray-800 bg-gray-50">
+    <!-- HERO -->
+    <!-- FIXED HEADER / NAVBAR -->
+    <header
+      id="site-header"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+    >
+      <div
+        id="header-inner"
+        class="bg-transparent backdrop-blur-md border-b border-transparent transition-all duration-300"
+      >
+        <div class="container mx-auto px-4">
+          <div class="flex justify-between items-center h-14">
+            <div
+              id="brand"
+              class="text-white text-sm font-bold tracking-widest uppercase font-mont transition-colors duration-300"
+            >
+              <span class="text-xl text-red-600">Mahindra</span>
+              <span class="text-md">Lifespaces</span>
+            </div>
+
+            <a
+              href="#contact"
+              id="cta"
+              class="bg-red-600 hover:bg-red-700 active:scale-95 text-white px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300"
+            >
+              Enquire Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      class="relative min-h-screen pt-20 flex items-center overflow-hidden"
+    >
+      <!-- Background -->
+      <img
+        src="https://www.mahindrablossomswhitefield.com/assets/img/deskban1.webp"
+        class="absolute inset-0 w-full h-full object-cover"
+        alt="Mahindra Blossom"
+      />
+
+      <!-- Dark Overlay (left heavy, right light) -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/75 to-transparent"
+      ></div>
+
+      <div class="container relative z-10">
+        <div class="row align-items-center">
+          <!-- LEFT CONTENT -->
+          <div class="col-lg-6 text-white" data-aos="fade-right">
+            <h1
+              class="text-5xl font-serif font-bold mb-1 tracking-tight text-red-600"
+            >
+              Mahindra Blossom
+            </h1>
+
+            <p
+              class="uppercase font-mont tracking-widest text-sm mb-2 fst-italic"
+            >
+              HOME OF POSITIVE ENERGY
+            </p>
+
+            <div class="flex items-center mb-2">
+              <div class="h-[1px] w-20 bg-red-500"></div>
+              &#x1F338;
+              <div class="h-[1px] w-20 bg-red-400"></div>
+            </div>
+
+            <p class="text-sm-start mb-3">
+              2, 3 & 4 BHK premium homes in <br />
+              <span class="font-semibold">Hopefarm Jn., Whitefield</span>
+            </p>
+
+            <div
+              class="inline-block bg-white/10 backdrop-blur px-6 py-2 rounded-pill mb-6 fst-italic"
+            >
+              <span class="text-xl font-bold">₹ 1.88 Cr Onwards</span>
+            </div>
+
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-start gap-2">
+                <span>&#x1F338; 8 Acres | 1 Towers | 6 Wings | 733 Units</span>
+              </li>
+
+              <li class="flex items-start gap-2">
+                <span>&#x1F338; Make it yours at just 7.5% down payment</span>
+              </li>
+
+              <li class="flex items-start gap-2">
+                <span>&#x1F338; Abutting Hopefarm metro station</span>
+              </li>
+
+              <li class="flex items-start gap-2">
+                <span>&#x1F338; IGBC Gold rated green home</span>
+              </li>
+
+              <li class="flex items-start gap-2">
+                <span>&#x1F338; 75+ Years of Mahindra Trust</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- RIGHT DOOR IMAGE (CUT-OUT STYLE) -->
+          <div
+            class="col-lg-6 d-none d-lg-flex justify-content-end"
+            data-aos="fade-left"
+          >
+            <div class="relative h-screen">
+              <img
+                src="./assets/images/hero-door.jpg"
+                class="max-w-lg rounded-t-full rounded-b-2xl shadow-2xl position-relative top-50 border-2"
+                alt="Luxury entrance"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="py-24 bg-[#FFF5F7] relative" data-aos="fade-up">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- LEFT CONTENT -->
+          <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+            <h2 class="text-4xl font-bold mb-2 font-playfair">
+              <span class="text-red-600">About</span>
+              <span class="text-gray-800">Mahindra Blossom</span>
+            </h2>
+
+            <p
+              class="uppercase font-mont tracking-widest text-sm text-gray-600 mb-2 fst-italic"
+            >
+              PREMIUM APARTMENTS IN WHITEFIELD, BENGALURU
+            </p>
+
+            <!-- Decorative divider -->
+            <div class="flex items-center mb-2">
+              <div class="h-[1px] w-24 bg-gray-300"></div>
+              &#x1F338;
+              <div class="h-[1px] w-24 bg-gray-300"></div>
+            </div>
+
+            <p class="text-gray-700 leading-relaxed mb-4 font-poppins">
+              Mahindra Blossom is a thoughtfully designed premium residential
+              apartment project in Whitefield, Bangalore, developed by
+              <strong>Mahindra Lifespaces</strong>, part of the trusted Mahindra
+              Group. Known for quality construction, transparency, and
+              sustainable development, Mahindra Lifespaces has delivered
+              landmark residential communities across India.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed mb-4 font-poppins">
+              Strategically located near
+              <strong>Hope Farm Junction, Whitefield</strong>, Mahindra Blossom
+              offers 2 BHK, 3 BHK, and 4 BHK luxury apartments crafted for
+              modern families, professionals, and long-term investors. The
+              project blends urban convenience with green living, creating a
+              calm, secure, and future-ready residential environment.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed mb-4">
+              With excellent connectivity to ITPL, major tech parks, schools,
+              hospitals, shopping hubs, and a fully operational metro station,
+              Mahindra Blossom ensures everyday comfort while offering strong
+              potential for property appreciation and rental demand.
+            </p>
+
+            <p class="italic text-gray-800 mt-4">
+              <strong
+                >Mahindra Blossom is not just a home — it’s a lifestyle upgrade
+                backed by the reliability of a trusted developer.</strong
+              >
+            </p>
+          </div>
+
+          <!-- RIGHT IMAGE (CARD STYLE LIKE YOUR DESIGN) -->
+          <div class="col-lg-6" data-aos="zoom-in">
+            <div class="relative bg-white p-3 rounded-2xl shadow-2xl">
+              <img
+                src="./assets/images/about.png"
+                class="w-full h-auto rounded-xl object-cover"
+                alt="About Mahindra Blossom"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES / HIGHLIGHTS -->
+    <section class="py-20 bg-[#f7f0f4]" data-aos="fade-up">
+      <div class="container">
+        <div class="row items-start">
+          <!-- LEFT IMAGE (CARD STYLE) -->
+          <div class="col-lg-5 mb-5" data-aos="fade-right">
+            <div class="bg-white p-3 rounded-[40px] shadow-xl w-100">
+              <img
+                src="./assets/images/features.png"
+                class="w-full h-auto rounded-[32px] object-cover"
+                alt="Mahindra Blossom Balcony View"
+              />
+            </div>
+          </div>
+
+          <!-- RIGHT CONTENT -->
+
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="space-y-6 text-gray-800">
+              <div class="text-center mb-4">
+                <h2 class="text-4xl font-semibold font-playfair">
+                  Features & <span class="text-red-600">Highlights</span>
+                </h2>
+                <p
+                  class="text-gray-600 mt-2 tracking-wide uppercase font-mont text-sm italic"
+                >
+                  WHY BUY A HOME AT MAHINDRA BLOSSOM
+                </p>
+                <div class="container mb-10">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <div class="border-top w-25"></div>
+                    &#x1F338;&#x1F338;&#x1F338;
+                    <div class="border-top w-25"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                &#x1F338;
+                <div>
+                  <h4 class="font-semibold uppercase font-mont tracking-wide">
+                    Prime and Well Connected Location
+                  </h4>
+                  <p class="text-sm mt-1 leading-relaxed">
+                    Located at Hope Farm Junction, Whitefield, Mahindra Blossom
+                    places you minutes away from ITPL, tech parks, top schools,
+                    hospitals, malls, and the fully operational metro — ensuring
+                    effortless daily travel and high future value.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-1">
+                &#x1F338;
+                <div>
+                  <h4 class="font-semibold uppercase font-mont tracking-wide">
+                    Homes Designed for Space, Light & Comfort
+                  </h4>
+                  <p class="text-sm mt-1 leading-relaxed">
+                    Choose from 2, 3 & 4 BHK premium apartments with smart,
+                    vastu compliant layouts, abundant natural light, and
+                    excellent ventilation — crafted for modern families,
+                    work-from-home needs, and everyday comfort.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                &#x1F338;
+                <div>
+                  <h4 class="font-semibold uppercase font-mont tracking-wide">
+                    Wake Up to Green, Calm Living
+                  </h4>
+                  <p class="text-sm mt-1 leading-relaxed">
+                    Surrounded by landscaped open spaces and greenery, Mahindra
+                    Blossom offers 4 acres of landscaped garden with
+                    bougainvillea canopies, aromatic and native plantations and
+                    butterfly park.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                &#x1F338;
+                <div>
+                  <h4 class="font-semibold uppercase font-mont tracking-wide">
+                    Resort-Style Amenities at Your Doorstep
+                  </h4>
+                  <p class="text-sm mt-1 leading-relaxed">
+                    Offering 97,000 sq. ft. of amenities and clubhouse spaces,
+                    including Bougainvillea canopies, half-Olympic size swimming
+                    pool, 25+ seater business center, cricket nets, 2 running
+                    tracks, 2 indoor badminton courts and much more.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                &#x1F338;
+                <div>
+                  <h4 class="font-semibold uppercase font-mont tracking-wide">
+                    Sustainable Living
+                  </h4>
+                  <p class="text-sm mt-1 leading-relaxed">
+                    Pre-certified IGBC Gold green homes with Net Zero Waste
+                    practices and energy-efficient design for lower consumption
+                    and sustainable living.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                &#x1F338;
+                <div>
+                  <h4 class="font-semibold uppercase font-mont tracking-wide">
+                    75+ Years of Mahindra Trust
+                  </h4>
+                  <p class="text-sm mt-1 leading-relaxed">
+                    Developed by Mahindra Lifespaces, part of the Mahindra
+                    Group, this project offers peace of mind through quality
+                    construction, transparency, & a proven track record of
+                    timely delivery.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="py-20 bg-red-600 text-white" data-aos="zoom-in">
+      <div class="container text-center">
+        <h2 class="text-4xl font-semibold mb-2 font-playfair">
+          Unlock the Door to Affordable Luxury
+        </h2>
+        <p class="uppercase font-mont tracking-widest text-sm mb-4">
+          Explore apartment options and pricing details tailored to your needs
+        </p>
+
+        <!-- DIVIDER WITH FLOWER ICON -->
+        <div class="flex items-center justify-center mb-8">
+          <div class="h-[1px] bg-white/50 w-1/3"></div>
+          &#x1F338;&#x1F338;&#x1F338;
+          <div class="h-[1px] bg-white/50 w-1/3"></div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- 2 BHK (SOLD OUT) -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="bg-white text-black p-6 rounded-3xl shadow-xl h-100 relative overflow-hidden"
+            >
+              <h4 class="text-xl font-semibold mb-2">2 BHK</h4>
+              <p class="text-gray-600 mb-1">1800-1850 sq.ft.</p>
+              <p class="text-xl font-semibold mb-4">₹ 2.18cr Onwards</p>
+
+              <span
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-transparent border-2 border-red-600 text-red-600 px-6 py-2 text-xl font-bold rotate-[-10deg]"
+              >
+                SOLD OUT
+              </span>
+            </div>
+          </div>
+
+          <!-- 3 BHK -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white text-black p-6 rounded-3xl shadow-xl h-100">
+              <h4 class="text-xl font-semibold mb-2">3 BHK</h4>
+              <p class="text-gray-600 mb-1">1800-1850 sq.ft.</p>
+              <p class="text-xl font-semibold mb-4">₹ 2.18cr Onwards</p>
+
+              <a
+                href="#"
+                class="block w-100 text-center border border-gray-700 text-gray-700 py-2 rounded-full font-semibold hover:bg-gray-100 transition"
+              >
+                Get Quote
+              </a>
+            </div>
+          </div>
+
+          <!-- 4 BHK -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-white text-black p-6 rounded-3xl shadow-xl h-100">
+              <h4 class="text-xl font-semibold mb-2">4 BHK</h4>
+              <p class="text-gray-600 mb-1">2200-2350 sq.ft.</p>
+              <p class="text-xl font-semibold mb-4">₹ 2.88cr Onwards</p>
+
+              <a
+                href="#"
+                class="block w-100 text-center border border-gray-700 text-gray-700 py-2 rounded-full font-semibold hover:bg-gray-100 transition"
+              >
+                Get Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMENITIES -->
+    <section class="py-20 bg-white" data-aos="fade-up">
+      <div class="container">
+        <div class="text-center mb-10">
+          <h2 class="text-4xl font-semibold font-playfair">
+            Amenities for
+            <span class="text-red-600">Every Age, Every Mood</span>
+          </h2>
+          <p class="uppercase font-mont tracking-widest text-sm mt-2">
+            Premium amenities that transform your home into a private retreat.
+          </p>
+        </div>
+
+        <!-- DIVIDER WITH FLOWER ICON -->
+        <div class="flex items-center justify-center mb-12">
+          <div class="h-[1px] bg-gray-300 w-1/3"></div>
+          &#x1F338;&#x1F338;&#x1F338;
+          <div class="h-[1px] bg-gray-300 w-1/3"></div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- AMENITY 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="relative rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="./assets/images/amenity-5-garden.png"
+                class="w-full h-[280px] object-cover"
+                alt="Landscaped Garden"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full bg-black/60 text-white p-3 text-center font-semibold"
+              >
+                Landscaped Garden
+              </div>
+            </div>
+          </div>
+
+          <!-- AMENITY 2 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="relative rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="./assets/images/amenity-9-kitchen.png"
+                class="w-full h-[280px] object-cover"
+                alt="Spacious Kitchen"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full bg-black/60 text-white p-3 text-center font-semibold"
+              >
+                Spacious Kitchen
+              </div>
+            </div>
+          </div>
+
+          <!-- AMENITY 3 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div class="relative rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="./assets/images/amenity-4-partyLaun.png"
+                class="w-full h-[280px] object-cover"
+                alt="Party Lawn"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full bg-black/60 text-white p-3 text-center font-semibold"
+              >
+                Party Lawn
+              </div>
+            </div>
+          </div>
+
+          <!-- AMENITY 4 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div class="relative rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="./assets/images/amenity-10-playground.png"
+                class="w-full h-[280px] object-cover"
+                alt="Kids Play Area"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full bg-black/60 text-white p-3 text-center font-semibold"
+              >
+                Kids Play Area
+              </div>
+            </div>
+          </div>
+
+          <!-- AMENITY 5 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div class="relative rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="./assets/images/amenity-6-gym.png"
+                class="w-full h-[280px] object-cover"
+                alt="Gym"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full bg-black/60 text-white p-3 text-center font-semibold"
+              >
+                Fully Equipped Gym
+              </div>
+            </div>
+          </div>
+
+          <!-- AMENITY 6 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+          >
+            <div class="relative rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="./assets/images/amenity-8-jogging.png"
+                class="w-full h-[280px] object-cover"
+                alt="Jogging Track"
+              />
+              <div
+                class="absolute bottom-0 left-0 w-full bg-black/60 text-white p-3 text-center font-semibold"
+              >
+                Jogging Track
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOOR PLANS -->
+    <section class="py-20 bg-red-600 text-white" data-aos="fade-up">
+      <div class="container text-center mb-10">
+        <h2 class="text-4xl font-semibold font-playfair">
+          Thoughtfully Designed Floor Plans
+        </h2>
+        <p class="uppercase font-mont tracking-widest text-sm mt-2">
+          Smart layouts that maximize space, light, and everyday comfort.
+        </p>
+      </div>
+
+      <!-- DIVIDER WITH FLOWER ICON -->
+      <div class="container mb-12">
+        <div class="flex items-center justify-center">
+          <div class="h-[1px] bg-white/40 w-1/3"></div>
+          &#x1F338;&#x1F338;&#x1F338;
+          <div class="h-[1px] bg-white/40 w-1/3"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <!-- MASTER PLAN -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div
+              class="relative bg-white rounded-2xl shadow-xl overflow-hidden p-3"
+            >
+              <div class="text-center mb-2">
+                <span
+                  class="bg-gray-200 text-black px-4 py-1 rounded-full text-sm font-semibold"
+                >
+                  MASTER PLAN
+                </span>
+              </div>
+
+              <div class="relative h-[260px] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/images/master-plan.png"
+                  class="w-full h-full object-cover blur-sm"
+                  alt="Master Plan"
+                />
+
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <a
+                    href="#"
+                    class="border border-black px-6 py-2 rounded-full text-black font-semibold bg-white/80"
+                  >
+                    View Plan
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 BHK (SOLD OUT) -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="relative bg-white rounded-2xl shadow-xl overflow-hidden p-3"
+            >
+              <div class="text-center mb-2">
+                <span
+                  class="bg-gray-200 text-black px-4 py-1 rounded-full text-sm font-semibold"
+                >
+                  2 BHK
+                </span>
+              </div>
+
+              <div class="relative h-[260px] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/images/amenity-7-hall.png"
+                  class="w-full h-full object-cover blur-sm"
+                  alt="2 BHK Floor Plan"
+                />
+
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <span
+                    class="bg-red-600 text-white px-6 py-2 font-bold rotate-[-10deg]"
+                  >
+                    SOLD OUT
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 BHK (LARGE) (SOLD OUT) -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="relative bg-white rounded-2xl shadow-xl overflow-hidden p-3"
+            >
+              <div class="text-center mb-2">
+                <span
+                  class="bg-gray-200 text-black px-4 py-1 rounded-full text-sm font-semibold"
+                >
+                  2 BHK (Large)
+                </span>
+              </div>
+
+              <div class="relative h-[260px] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/images/amenity-9-kitchen.png"
+                  class="w-full h-full object-cover blur-sm"
+                  alt="2 BHK Large Floor Plan"
+                />
+
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <span
+                    class="bg-red-600 text-white px-6 py-2 font-bold rotate-[-10deg]"
+                  >
+                    SOLD OUT
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 BHK -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="relative bg-white rounded-2xl shadow-xl overflow-hidden p-3"
+            >
+              <div class="text-center mb-2">
+                <span
+                  class="bg-gray-200 text-black px-4 py-1 rounded-full text-sm font-semibold"
+                >
+                  3 BHK
+                </span>
+              </div>
+
+              <div class="relative h-[260px] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/images/amenity-3.png"
+                  class="w-full h-full object-cover"
+                  alt="3 BHK Floor Plan"
+                />
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <a
+                    href="#"
+                    class="border border-black px-6 py-2 rounded-full text-black font-semibold bg-white/80"
+                  >
+                    View Plan
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3.5 BHK -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div
+              class="relative bg-white rounded-2xl shadow-xl overflow-hidden p-3"
+            >
+              <div class="text-center mb-2">
+                <span
+                  class="bg-gray-200 text-black px-4 py-1 rounded-full text-sm font-semibold"
+                >
+                  3.5 BHK
+                </span>
+              </div>
+
+              <div class="relative h-[260px] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/images/amenity-4.png"
+                  class="w-full h-full object-cover"
+                  alt="3.5 BHK Floor Plan"
+                />
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <a
+                    href="#"
+                    class="border border-black px-6 py-2 rounded-full text-black font-semibold bg-white/80"
+                  >
+                    View Plan
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 BHK -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div
+              class="relative bg-white rounded-2xl shadow-xl overflow-hidden p-3"
+            >
+              <div class="text-center mb-2">
+                <span
+                  class="bg-gray-200 text-black px-4 py-1 rounded-full text-sm font-semibold"
+                >
+                  4 BHK
+                </span>
+              </div>
+
+              <div class="relative h-[260px] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/images/amenity-6.png"
+                  class="w-full h-full object-cover"
+                  alt="4 BHK Floor Plan"
+                />
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <a
+                    href="#"
+                    class="border border-black px-6 py-2 rounded-full text-black font-semibold bg-white/80"
+                  >
+                    View Plan
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="py-20 bg-white" data-aos="fade-up">
+      <div class="container text-center mb-6">
+        <h2 class="text-4xl font-semibold font-playfair">
+          A Glimpse of
+          <span class="text-red-600">Life at Mahindra Blossom</span>
+        </h2>
+        <p class="text-gray-600 italic mt-2 tracking-wide">
+          VIEW IMAGES OF HOMES, AMENITIES, AND THE SURROUNDING ENVIRONMENT.
+        </p>
+      </div>
+
+      <!-- DIVIDER WITH FLOWER -->
+      <div class="container mb-10">
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="border-top w-25"></div>
+          &#x1F338;&#x1F338;&#x1F338;
+          <div class="border-top w-25"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row g-4">
+          <!-- ROW 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <img
+              src="./assets/images/amenity-1-bedroom.png"
+              class="w-100 rounded-4 shadow-sm"
+              style="height: 280px; object-fit: cover"
+            />
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <img
+              src="./assets/images/amenity-9-kitchen.png"
+              class="w-100 rounded-4 shadow-sm"
+              style="height: 280px; object-fit: cover"
+            />
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <img
+              src="./assets/images/amenity-7-hall.png"
+              class="w-100 rounded-4 shadow-sm"
+              style="height: 280px; object-fit: cover"
+            />
+          </div>
+
+          <!-- ROW 2 (TALL IMAGES) -->
+          <div class="col-lg-6 col-md-6" data-aos="fade-right">
+            <img
+              src="./assets/images/amenity-11-pool.png"
+              class="w-100 rounded-4 shadow-sm"
+              style="height: 420px; object-fit: cover"
+            />
+          </div>
+
+          <div class="col-lg-6 col-md-6" data-aos="fade-left">
+            <img
+              src="./assets/images/amenity-6-gym.png"
+              class="w-100 rounded-4 shadow-sm"
+              style="height: 420px; object-fit: cover"
+            />
+          </div>
+
+          <!-- ROW 3 (SMALLER STRIP IMAGES - OPTIONAL LIKE YOUR REF) -->
+          <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
+            <img
+              src="./assets/images/amenity-4-partyLaun.png"
+              class="w-100 rounded-4 shadow-sm"
+              style="height: 200px; object-fit: cover"
+            />
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
+            <img
+              src="./assets/images/amenity-5-garden.png"
+              class="w-100 rounded-4 shadow-sm"
+              style="height: 200px; object-fit: cover"
+            />
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
+            <img
+              src="./assets/images/amenity-2.png"
+              class="w-100 rounded-4 shadow-sm"
+              style="height: 200px; object-fit: cover"
+            />
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
+            <img
+              src="./assets/images/amenity-10-playground.png"
+              class="w-100 rounded-4 shadow-sm"
+              style="height: 200px; object-fit: cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIFICATIONS -->
+    <section class="py-20 bg-white" data-aos="fade-up">
+      <div class="container text-center mb-6">
+        <h2 class="text-4xl font-semibold font-playfair">
+          Smart <span class="text-red-600">Specifications</span>
+        </h2>
+        <p class="text-gray-600 italic mt-2 tracking-wide">
+          WHERE QUALITY MEETS FUNCTIONALITY
+        </p>
+      </div>
+
+      <!-- DIVIDER WITH FLOWER -->
+      <div class="container mb-10">
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="border-top w-25"></div>
+          &#x1F338;&#x1F338;&#x1F338;
+          <div class="border-top w-25"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row g-4">
+          <!-- CARD 1 -->
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in">
+            <div class="bg-white rounded-4 shadow overflow-hidden h-100">
+              <img
+                src="./assets/images/features.png"
+                class="w-100"
+                style="height: 220px; object-fit: cover"
+              />
+              <div class="p-4">
+                <h5 class="fw-semibold text-center mb-2">
+                  DOORS, WINDOWS & RAILINGS
+                </h5>
+                <ul class="list-unstyled small mb-0">
+                  <li class="d-flex gap-2">
+                    <span class="me-2">&#x1F338;</span> uPVC windows
+                  </li>
+                  <li class="d-flex gap-2">
+                    <span class="me-2">&#x1F338;</span> Balcony glass railing
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="bg-white rounded-4 shadow overflow-hidden h-100">
+              <img
+                src="./assets/images/amenity-9-kitchen.png"
+                class="w-100"
+                style="height: 220px; object-fit: cover"
+              />
+              <div class="p-4">
+                <h5 class="fw-semibold text-center mb-2">WALLS</h5>
+                <ul class="list-unstyled small mb-0">
+                  <li class="d-flex gap-2">
+                    <span class="me-2">&#x1F338;</span> Living, Dining, Bedrooms
+                  </li>
+                  <li class="d-flex gap-2">
+                    <span class="me-2">&#x1F338;</span> Kitchen & Bathrooms -
+                    Tiles
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div class="bg-white rounded-4 shadow overflow-hidden h-100">
+              <img
+                src="./assets/images/amenity-11-pool.png"
+                class="w-100"
+                style="height: 220px; object-fit: cover"
+              />
+              <div class="p-4">
+                <h5 class="fw-semibold text-center mb-2">
+                  CP & SANITARY FITTINGS
+                </h5>
+                <ul class="list-unstyled small mb-0">
+                  <li class="d-flex gap-2">
+                    <span class="me-2">&#x1F338;</span> Chromium plated fittings
+                  </li>
+                  <li class="d-flex gap-2">
+                    <span class="me-2">&#x1F338;</span> Branded sanitary ware
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div class="bg-white rounded-4 shadow overflow-hidden h-100">
+              <img
+                src="./assets/images/amenity-1-bedroom.png"
+                class="w-100"
+                style="height: 220px; object-fit: cover"
+              />
+              <div class="p-4">
+                <h5 class="fw-semibold text-center mb-2">FLOOR FINISH</h5>
+                <ul class="list-unstyled small mb-0">
+                  <li class="d-flex gap-2">
+                    <span class="me-2">&#x1F338;</span> Large format vitrified
+                    tiles
+                  </li>
+                  <li class="d-flex gap-2">
+                    <span class="me-2">&#x1F338;</span> Anti-slip tiles
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="py-20 bg-white" data-aos="fade-up">
+      <div class="container text-center mb-6">
+        <h2 class="text-4xl font-semibold font-playfair">
+          A Perfect <span class="text-red-600">Location</span>
+        </h2>
+        <p class="text-gray-600 italic mt-2 tracking-wide">
+          EVERYTHING YOU NEED, JUST MINUTES AWAY
+        </p>
+      </div>
+
+      <!-- DIVIDER WITH FLOWER -->
+      <div class="container mb-10">
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="border-top w-25"></div>
+          &#x1F338;&#x1F338;&#x1F338;
+          <div class="border-top w-25"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- LEFT CONTENT -->
+          <div class="col-lg-6" data-aos="fade-right">
+            <ul class="list-unstyled fs-6">
+              <li class="d-flex align-items-start mb-3">
+                <span class="me-2">&#x1F338;</span>
+                Abutting Hopefarm Channasandra Metro Station
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <span class="me-2">&#x1F338;</span>
+                Key terminals within 1.3 km radius - Whitefield railway station
+                and Hopefarm bus stop
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <span class="me-2">&#x1F338;</span>
+                Major IT parks within 2.5 km radius - ITPL, new Google office
+              </li>
+              <li class="d-flex align-items-start">
+                <span class="me-2">&#x1F338;</span>
+                Social infrastructure within 3 km - Schools, colleges,
+                hospitals, etc.
+              </li>
+            </ul>
+          </div>
+
+          <!-- RIGHT MAP CARD -->
+          <div class="col-lg-6" data-aos="zoom-in">
+            <div class="bg-light rounded-4 shadow p-2">
+              <img
+                src="./assets/images/mahindra-blossome-location.png"
+                class="w-100 rounded-4"
+                style="object-fit: cover"
+                alt="Mahindra Blossom Location Map"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a
+      href="https://wa.me/7991845638"
+      target="_blank"
+      id="whatsapp-float"
+      class="fixed bottom-20 right-10 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+        class="w-8 h-8"
+      />
+    </a>
+
+    <!-- FLOATING BOTTOM ACTION FOOTER (VISIBLE WHILE SCROLLING) -->
+    <div
+      id="floating-footer"
+      class="fixed bottom-0 left-0 w-full bg-white text-white shadow-xl z-50"
+    >
+      <div class="container">
+        <div
+          class="flex justify-content-center items-center text-sm md:text-base"
+        >
+          <a
+            href="#contact"
+            class="flex items-center gap-2 hover:opacity-80 bg-red-600 p-2 px-4"
+          >
+            📍 <span>Book a Site Visit</span>
+          </a>
+
+          <a
+            href="tel:+919901717339"
+            class="flex items-center gap-2 hover:opacity-80 text-black px-4"
+          >
+            📞 <span>+91 9901717339</span>
+          </a>
+
+          <a
+            href="#"
+            class="flex items-center gap-2 hover:opacity-80 bg-red-600 p-2 px-4"
+          >
+            ⬇ <span>Download Brochure</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPACER TO FIX VIDEO OVERLAP -->
+    <div class="footer-spacer"></div>
+
+    <!-- VIDEO FOOTER  -->
+    <footer class="relative bg-red-600 text-white pt-64 pb-16" id="contact">
+      <div
+        id="videoWrapper"
+        class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl rounded-2xl overflow-hidden shadow-2xl bg-black"
+      >
+        <!-- Placeholder before video loads -->
+        <div
+          id="videoPlaceholder"
+          class="w-full h-[260px] md:h-[380px] flex items-center justify-center bg-black text-white"
+        >
+          Loading Virtual Tour...
+        </div>
+
+        <div
+          class="absolute inset-0 flex items-center justify-center pointer-events-none"
+        >
+          <span class="bg-black/60 px-6 py-2 rounded-full"> </span>
+        </div>
+      </div>
+
+      <div class="container text-center relative z-10">
+        <h3 class="text-3xl font-semibold mb-4">
+          Ready to Experience Fine Living?
+        </h3>
+
+        <p class="mb-6 max-w-xl mx-auto">
+          Schedule a site visit or get in touch with us today.
+        </p>
+
+        <a
+          href="#"
+          class="bg-gray-900 hover:bg-black text-white px-8 py-3 rounded-full font-semibold"
+        >
+          Enquire Now
+        </a>
+
+        <p class="text-xs text-white/70 mt-10">
+          © 2026 Mahindra Lifespaces. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

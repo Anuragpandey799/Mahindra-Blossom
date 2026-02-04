@@ -1,0 +1,32 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+}
+
+h4, h5, h6, .subtitle {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Make hero background slightly darker */
+.hero-section img {
+  filter: brightness(0.9);
+}
+
+/* FIXED: Now actually used */
+.hero-door {
+  clip-path: ellipse(55% 100% at 50% 0%);
+}
+
+/* Footer spacing fix */
+.footer-spacer {
+  height: 220px;
+}
+
+@media (min-width: 768px) {
+  .footer-spacer {
+    height: 300px;
+  }
+}
